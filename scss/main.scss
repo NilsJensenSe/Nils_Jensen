@@ -1,0 +1,342 @@
+@import "variables";
+@import "utilities";
+
+//General Styles
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Sen', sans-serif;
+    line-height: 1.6;
+    background: $white;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 4rem;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 2.4rem;
+}
+
+h3 {
+    font-weight: 500;
+    font-size: 2.2rem;
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+
+// Navbar
+#navbar {
+    background: $orange2;
+    color: $white;
+    position: sticky;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+
+
+    .content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+
+        #logo {
+            font-weight: 800;
+            font-size: 2rem;
+            padding: 0 1rem;
+        }
+
+        .menu {
+            display: flex;
+
+            li {
+            padding: 1.2rem 2rem;
+            }
+        }
+    }
+}
+
+#header {
+    background: linear-gradient($orange2, $orange1);
+    color: $white;
+    position: relative;
+    top: 0;
+    height: 75vh;
+    align-items: center;
+
+    .container {
+        display: flex;
+        flex-direction: row;
+
+        .text {
+            margin-top: 200px;
+            padding: 2rem;
+            align-items: center;
+            justify-content: center;
+
+            h2 {
+                font-size: 2rem;
+            }
+        }
+
+        .photo {
+        img {
+            margin-top: 80px;
+            margin-left: 40px;
+            padding: 0.6rem;
+            width: 400px;
+            display: block;
+            background-color: $white;
+            border-radius: 40px;
+            }
+        }
+    }
+}
+
+#om-mig {
+    background: linear-gradient($blue2, $blue1);
+    color: $white;
+    align-items: center;
+    height: 700px;
+
+    .container {
+        padding-top: 50px;
+        display: flex;
+        flex-direction: row;
+
+        .text {
+            margin-right: 100px;
+            padding: 2rem;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .photo {
+            padding-top: 50px;
+            margin-right: 250px;
+        img {
+            padding: 0.6rem;
+            width: 300px;
+            display: block;
+            background-color: $white;
+            border-radius: 40px;
+            }
+
+            .bild2 {
+                position: relative;
+                z-index: 3;
+            }
+            .bild3 {
+                transform: translate(220px, -300px);
+                z-index: 2;
+            }
+        }
+    }
+}
+
+#skadespeleri {
+    background: linear-gradient($orange2, $orange1);
+    color: $white;
+    align-items: center;
+    
+    .container {
+        h2 {
+            margin: 40px 0;
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        .content {
+            text-align: center;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 40px;
+
+            .showreel {
+                iframe {
+                    width: 580px;
+                    height: 326px;
+                    padding: 8px;
+                    margin: 8px;
+                    background: white;
+                    border-radius: 40px;
+                }
+            }
+
+            .cv {
+                embed {
+                    width: 580px;
+                    height: 326px;
+                    padding: 8px;
+                    margin: 8px;
+                    background: white;
+                    border-radius: 40px;
+                }
+            }
+        }
+
+        .galleri {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 40px;
+
+            img {
+                padding: 8px;
+                margin: 8px;
+                background: white;
+                border-radius: 40px;
+            }
+        }
+    }
+}
+
+
+#sang {
+    background: linear-gradient($blue2, $blue1);
+    color: $white;
+
+    .container {
+        h2 {
+            margin: 40px 0;
+        }
+
+        .videos {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            
+            iframe {
+                width: 580px;
+                height: 326px;
+                padding: 8px;
+                margin: 8px;
+                background: white;
+                border-radius: 40px;
+            }
+        }
+    }
+}
+
+#design-foto {
+    background: linear-gradient($orange2, $orange1);
+    color: $white;
+
+    .container {
+        h2 {
+            margin: 40px 0;
+        }
+
+        .content {
+            h3 {
+                text-align: center;
+            }
+
+            .posters {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                gap: 1rem;
+                justify-content: center;
+                margin-bottom: 40px;
+
+                img {
+                    padding: 8px;
+                    margin: 8px;
+                    background: white;
+                    border-radius: 40px;
+                }
+            }
+
+            .hemsidor {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem;
+                justify-content: center;
+                margin-bottom: 40px;
+
+                .hemsida {
+                    a {
+                        p {
+                            text-align: center;
+                        }
+
+                        img {
+                        padding: 8px;
+                        margin: 8px;
+                        background: white;
+                        border-radius: 40px;
+                        }
+                    }
+                }
+            }
+
+            .foton {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+                gap: 1rem;
+                justify-content: center;
+                margin-bottom: 40px;
+
+                img {
+                    padding: 8px;
+                    margin: 8px;
+                    background: white;
+                    border-radius: 40px;
+                }
+            }
+        }
+    }
+}
+
+#kontakt {
+    background: linear-gradient($blue2, $blue1);
+    color: $white;
+
+    .container {
+        h2 {
+            margin-top: 40px;
+        }
+        .content {
+            p {
+                margin: 20px 0;
+            }
+        }
+    }
+}
+
+// Import Media Queries
+@import "media";
