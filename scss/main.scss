@@ -39,7 +39,7 @@ h1 {
 
 h2 {
     font-weight: 600;
-    font-size: 2.4rem;
+    font-size: 3rem;
 }
 
 h3 {
@@ -48,7 +48,7 @@ h3 {
 }
 
 p {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 
@@ -62,7 +62,6 @@ p {
     left: 0;
     z-index: 10;
 
-
     .content {
         display: flex;
         justify-content: space-between;
@@ -75,11 +74,52 @@ p {
             padding: 0 1rem;
         }
 
+        .sidebar {
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100vh;
+            width: 100vw;
+            z-index: 100;
+            background: rgba(241, 120, 49, 0.3);
+            backdrop-filter: blur(10px);
+            box-shadow: -10px 0 10px 0 rgba(0, 0, 0, 0.1);
+            display: none;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+
+            li {
+                width: 100%;
+                padding: 1.2rem 4rem;
+
+                :hover {
+                    color: $orange1;
+                }
+
+                a {
+                    width: 100%;
+                    color: $white;
+                    font-weight: 600;
+                    font-size: 1.6rem;
+                }
+            }
+        }
+
         .menu {
             display: flex;
 
+            .menu-button {
+                display: none;
+            }
+
             li {
             padding: 1.2rem 2rem;
+
+                :hover {
+                    color: $orange1;
+                    transition: all 0.2s ease-in-out;
+                }
             }
         }
     }
@@ -89,8 +129,6 @@ p {
     background: linear-gradient($orange2, $orange1);
     color: $white;
     position: relative;
-    top: 0;
-    height: 75vh;
     align-items: center;
 
     .container {
@@ -99,19 +137,20 @@ p {
 
         .text {
             margin-top: 200px;
+            margin-right: 100px;
             padding: 2rem;
             align-items: center;
             justify-content: center;
 
             h2 {
-                font-size: 2rem;
+                font-size: 1.2rem;
             }
         }
 
         .photo {
         img {
             margin-top: 80px;
-            margin-left: 40px;
+            margin-bottom: 100px;
             padding: 0.6rem;
             width: 400px;
             display: block;
@@ -126,7 +165,6 @@ p {
     background: linear-gradient($blue2, $blue1);
     color: $white;
     align-items: center;
-    height: 700px;
 
     .container {
         padding-top: 50px;
@@ -135,7 +173,7 @@ p {
 
         .text {
             margin-right: 100px;
-            padding: 2rem;
+            padding: 1rem;
             align-items: center;
             justify-content: center;
         }
@@ -143,20 +181,22 @@ p {
         .photo {
             padding-top: 50px;
             margin-right: 250px;
+
         img {
             padding: 0.6rem;
-            width: 300px;
-            display: block;
+            display: inline-block;
             background-color: $white;
             border-radius: 40px;
             }
 
             .bild2 {
+                width: 300px;
                 position: relative;
                 z-index: 3;
             }
             .bild3 {
-                transform: translate(220px, -300px);
+                width: 300px;
+                transform: translate(240px, -200px);
                 z-index: 2;
             }
         }
@@ -216,7 +256,7 @@ p {
 
             img {
                 padding: 8px;
-                margin: 8px;
+                margin: 0px;
                 background: white;
                 border-radius: 40px;
             }
@@ -228,6 +268,7 @@ p {
 #sang {
     background: linear-gradient($blue2, $blue1);
     color: $white;
+    align-items: center;
 
     .container {
         h2 {

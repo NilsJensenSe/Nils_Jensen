@@ -32,13 +32,23 @@
     <nav id="navbar">
         <div class="content">
             <a href="#header" id="logo">Nils Jensen</a>
-            <ul class="menu">
+            <ul class="sidebar">
+                <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 -960 960 960" width="36px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
                 <li><a href="#header">Hem</a></li>
                 <li><a href="#om-mig">Om mig</a></li>
                 <li><a href="#skadespeleri">Skådespeleri</a></li>
                 <li><a href="#sang">Sång</a></li>
                 <li><a href="#design-foto">Design/Foto</a></li>
                 <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
+            <ul class="menu">
+                <li class="hideOnMobile"><a href="#header">Hem</a></li>
+                <li class="hideOnMobile"><a href="#om-mig">Om mig</a></li>
+                <li class="hideOnMobile"><a href="#skadespeleri">Skådespeleri</a></li>
+                <li class="hideOnMobile"><a href="#sang">Sång</a></li>
+                <li class="hideOnMobile"><a href="#design-foto">Design/Foto</a></li>
+                <li class="hideOnMobile"><a href="#kontakt">Kontakt</a></li>
+                <li onclick=showSidebar() class="menu-button"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 -960 960 960" width="36px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
             </ul>
         </div>
     </nav>
@@ -283,5 +293,21 @@
             </div>
         </div>
     </section>
+
+    <div class="streck"></div>
+
+
+    <script>
+
+    function showSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'flex'
+        }
+        
+        function hideSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'none'
+        }
+    </script>
 </body>
 </html>

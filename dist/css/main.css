@@ -46,7 +46,7 @@ h1 {
 
 h2 {
   font-weight: 600;
-  font-size: 2.4rem;
+  font-size: 3rem;
 }
 
 h3 {
@@ -55,7 +55,7 @@ h3 {
 }
 
 p {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 #navbar {
@@ -78,19 +78,53 @@ p {
   font-size: 2rem;
   padding: 0 1rem;
 }
+#navbar .content .sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 100;
+  background: rgba(241, 120, 49, 0.3);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  box-shadow: -10px 0 10px 0 rgba(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+#navbar .content .sidebar li {
+  width: 100%;
+  padding: 1.2rem 4rem;
+}
+#navbar .content .sidebar li :hover {
+  color: #F17831;
+}
+#navbar .content .sidebar li a {
+  width: 100%;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.6rem;
+}
 #navbar .content .menu {
   display: flex;
 }
+#navbar .content .menu .menu-button {
+  display: none;
+}
 #navbar .content .menu li {
   padding: 1.2rem 2rem;
+}
+#navbar .content .menu li :hover {
+  color: #F17831;
+  transition: all 0.2s ease-in-out;
 }
 
 #header {
   background: linear-gradient(#A04728, #F17831);
   color: #fff;
   position: relative;
-  top: 0;
-  height: 75vh;
   align-items: center;
 }
 #header .container {
@@ -99,16 +133,17 @@ p {
 }
 #header .container .text {
   margin-top: 200px;
+  margin-right: 100px;
   padding: 2rem;
   align-items: center;
   justify-content: center;
 }
 #header .container .text h2 {
-  font-size: 2rem;
+  font-size: 1.2rem;
 }
 #header .container .photo img {
   margin-top: 80px;
-  margin-left: 40px;
+  margin-bottom: 100px;
   padding: 0.6rem;
   width: 400px;
   display: block;
@@ -120,7 +155,6 @@ p {
   background: linear-gradient(#3A7496, #54A1CE);
   color: #fff;
   align-items: center;
-  height: 700px;
 }
 #om-mig .container {
   padding-top: 50px;
@@ -129,7 +163,7 @@ p {
 }
 #om-mig .container .text {
   margin-right: 100px;
-  padding: 2rem;
+  padding: 1rem;
   align-items: center;
   justify-content: center;
 }
@@ -139,17 +173,18 @@ p {
 }
 #om-mig .container .photo img {
   padding: 0.6rem;
-  width: 300px;
-  display: block;
+  display: inline-block;
   background-color: #fff;
   border-radius: 40px;
 }
 #om-mig .container .photo .bild2 {
+  width: 300px;
   position: relative;
   z-index: 3;
 }
 #om-mig .container .photo .bild3 {
-  transform: translate(220px, -300px);
+  width: 300px;
+  transform: translate(240px, -200px);
   z-index: 2;
 }
 
@@ -196,7 +231,7 @@ p {
 }
 #skadespeleri .container .galleri img {
   padding: 8px;
-  margin: 8px;
+  margin: 0px;
   background: white;
   border-radius: 40px;
 }
@@ -204,6 +239,7 @@ p {
 #sang {
   background: linear-gradient(#3A7496, #54A1CE);
   color: #fff;
+  align-items: center;
 }
 #sang .container h2 {
   margin: 40px 0;
@@ -285,4 +321,164 @@ p {
 }
 #kontakt .container .content p {
   margin: 20px 0;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 1000px;
+  }
+  p {
+    font-size: 1.2rem;
+  }
+  #skadespeleri .container .content .showreel iframe {
+    width: 480px;
+    height: 300px;
+    margin: 4px;
+  }
+  #skadespeleri .container .content .cv embed {
+    width: 480px;
+    height: 300px;
+    padding: 8px;
+    margin: 4px;
+  }
+  #sang .container h2 {
+    margin: 0;
+    margin-top: 10px;
+  }
+  #sang .container .videos {
+    align-items: center;
+  }
+  #sang .container .videos iframe {
+    width: 480px;
+    height: 300px;
+  }
+}
+@media (max-width: 992px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.4rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  .container {
+    max-width: 700px;
+  }
+  #navbar .content .menu .hideOnMobile {
+    display: none;
+  }
+  #navbar .content .menu .menu-button {
+    display: block;
+  }
+  #header .container .photo img {
+    width: 300px;
+  }
+  #om-mig .container .text {
+    margin: 0;
+  }
+  #om-mig .container .photo {
+    margin-right: 120px;
+  }
+  #om-mig .container .photo .bild2 {
+    width: 220px;
+    position: relative;
+    z-index: 3;
+  }
+  #om-mig .container .photo .bild3 {
+    width: 220px;
+    transform: translate(120px, -60px);
+    z-index: 2;
+  }
+  #skadespeleri .container .content {
+    flex-direction: column;
+  }
+  #skadespeleri .container .galleri {
+    grid-template-columns: 1fr 1fr;
+  }
+  #sang .container .videos {
+    flex-direction: column;
+    text-align: center;
+  }
+  #sang .container .videos .video {
+    padding: 1rem;
+  }
+  #design-foto .container .content .posters {
+    grid-template-columns: 1fr 1fr;
+  }
+  #design-foto .container .content .hemsidor {
+    grid-template-columns: 1fr;
+  }
+  #design-foto .container .content .foton {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    max-width: 600px;
+  }
+  #header .container {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  #header .container .text {
+    margin: 0;
+  }
+  #header .container .photo img {
+    margin-top: 0;
+    margin-bottom: 60px;
+  }
+  #om-mig .container {
+    flex-direction: column;
+  }
+  #om-mig .container .photo {
+    margin-left: 80px;
+    margin-right: 10px;
+  }
+  #om-mig .container .photo .bild3 {
+    transform: translate(-40px, -60px);
+  }
+}
+@media (max-width: 576px) {
+  .container {
+    max-width: 320px;
+  }
+  #om-mig .container .photo {
+    margin-left: 0;
+    padding-top: 0;
+  }
+  #om-mig .container .photo .bild3 {
+    transform: translate(80px, -30px);
+  }
+  #skadespeleri .container .content .showreel iframe {
+    width: 280px;
+    height: 200px;
+    margin: 4px;
+  }
+  #skadespeleri .container .content .cv embed {
+    width: 280px;
+    height: 200px;
+    padding: 8px;
+  }
+  #skadespeleri .container .galleri {
+    grid-template-columns: 1fr;
+  }
+  #sang .container .videos iframe {
+    width: 280px;
+    height: 200px;
+  }
+  #design-foto .container .content .posters {
+    grid-template-columns: 1fr;
+  }
+  #design-foto .container .content .foton {
+    grid-template-columns: 1fr;
+  }
+  #kontakt .container h2 {
+    margin-top: 10px;
+  }
 }/*# sourceMappingURL=main.css.map */

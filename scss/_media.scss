@@ -1,8 +1,286 @@
-@media (max-width: 1200px) {}
+@media (max-width: 1200px) {
 
-@media (max-width: 992px) {}
+.container {
+    max-width: 1000px;
+}
 
-@media (max-width: 768px) {} 
+p {
+    font-size: 1.2rem;
+}
 
-@media (max-width: 576px) {}
+#skadespeleri {
+    .container {
+        .content {
+            .showreel {
+                iframe {
+                    width: 480px;
+                    height: 300px;
+                    margin: 4px;
+                }
+            }
+
+            .cv {
+                embed {
+                    width: 480px;
+                    height: 300px;
+                    padding: 8px;
+                    margin: 4px;
+                }
+            }
+        }
+    }
+}
+
+#sang {
+    .container {
+        h2 {
+            margin: 0;
+            margin-top: 10px;
+        }
+        .videos {    
+            align-items: center;        
+            iframe {
+                width: 480px;
+                height: 300px;
+            }
+        }
+    }
+}
+
+}
+
+
+@media (max-width: 992px) {
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.4rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .container {
+        max-width: 700px;
+    }
+
+    #navbar {
+        .content {
+            .menu {
+
+                .hideOnMobile {
+                    display: none;
+                }
+                .menu-button {
+                    display: block;
+                }
+            }
+        }
+    }
+    
+    #header {
+        .container {
+            .photo {
+                img {
+                    width: 300px;
+                }
+            }
+        }
+    }
+
+    #om-mig {
+        .container {
+            .text {
+                margin: 0;
+            }
+    
+            .photo {  
+                margin-right: 120px;    
+                .bild2 {
+                    width: 220px;
+                    position: relative;
+                    z-index: 3;
+                }
+                .bild3 {
+                    width: 220px;
+                    transform: translate(120px, -60px);
+                    z-index: 2;
+                }
+            }
+        }
+    }
+
+    #skadespeleri { 
+        .container {
+            .content {
+                flex-direction: column;
+                }
+
+                .galleri {
+                    grid-template-columns: 1fr 1fr;
+                }
+        }
+    }
+
+    #sang {
+        .container {
+            .videos {
+                flex-direction: column;
+                text-align: center;
+            
+                .video {
+                    padding: 1rem;
+                }
+            }
+        }
+    }
+
+    #design-foto {
+        .container {
+            .content {
+                .posters {
+                    grid-template-columns: 1fr 1fr;
+                }
+                .hemsidor {
+                    grid-template-columns: 1fr;
+                }
+                .foton {
+                    grid-template-columns: 1fr 1fr;
+                }
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 768px) {
+
+    .container {
+        max-width: 600px;
+    }
+
+    #header {
+        .container {
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+
+            .text {
+                margin: 0;
+            }
+
+            .photo {
+                img {
+                    margin-top: 0;
+                    margin-bottom: 60px;
+                }
+            }
+        }
+    }
+
+
+    #om-mig {
+        .container {
+            flex-direction: column;
+
+            .photo {
+                margin-left: 80px;
+                margin-right: 10px;
+            
+                .bild3 {
+                    transform: translate(-40px, -60px);
+                }
+            }
+
+        }
+    }
+} 
+
+
+
+@media (max-width: 576px) {
+
+    .container {
+        max-width: 320px;
+    }
+
+    #om-mig {
+        .container {
+            .photo {
+                margin-left: 0;
+                padding-top: 0;
+                .bild3 {
+                    transform: translate(80px, -30px);
+                }
+            }
+        }
+    }
+
+    #skadespeleri {
+        .container {
+            .content {
+                .showreel {
+                    iframe {
+                        width: 280px;
+                        height: 200px;
+                        margin: 4px;
+                    }
+                }
+    
+                .cv {
+                    embed {
+                        width: 280px;
+                        height: 200px;
+                        padding: 8px;
+                    }
+                }
+            }
+            .galleri {
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+
+    #sang {
+        .container {
+            .videos {       
+                iframe {
+                    width: 280px;
+                    height: 200px;
+                }
+            }
+        }
+    }
+
+    #design-foto {
+        .container {
+            .content {
+                .posters {
+                    grid-template-columns: 1fr;
+                }
+                .foton {
+                    grid-template-columns: 1fr;
+                }
+            }
+        }
+    }
+
+    #kontakt {
+        .container {
+            h2 {
+                margin-top: 10px;
+            }
+        }
+    }
+
+}
 
