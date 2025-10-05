@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .container {
   max-width: 1200px;
   padding: 1rem;
@@ -72,6 +73,11 @@ p {
   justify-content: space-between;
   align-items: center;
   padding: 0;
+  /* ===== SIDEBAR - Mobilmeny ===== */
+  /* När menyn är aktiv */
+  /* Länkarna i menyn */
+  /* X-KNAPPEN uppe till höger */
+  /* Fade ut när man stänger */
 }
 #navbar .content #logo {
   font-weight: 800;
@@ -81,31 +87,52 @@ p {
 #navbar .content .sidebar {
   position: fixed;
   top: 0;
-  right: 0;
-  height: 100vh;
+  left: 0;
   width: 100vw;
-  z-index: 100;
-  background: rgba(241, 120, 49, 0.3);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-  box-shadow: -10px 0 10px 0 rgba(0, 0, 0, 0.1);
+  height: 100vh;
+  background: rgba(241, 120, 49, 0.7); /* ORANGE overlay */
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
   display: none;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+#navbar .content .sidebar.active {
+  display: flex;
+  opacity: 1;
 }
 #navbar .content .sidebar li {
-  width: 100%;
-  padding: 1.2rem 4rem;
-}
-#navbar .content .sidebar li :hover {
-  color: #F17831;
+  padding: 1.2rem;
+  text-align: center;
 }
 #navbar .content .sidebar li a {
-  width: 100%;
-  color: #fff;
-  font-weight: 600;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+#navbar .content .sidebar li a:hover {
+  color: #ffddbb;
+}
+#navbar .content .sidebar li:first-child {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  padding: 0;
+}
+#navbar .content .sidebar li:first-child a svg {
+  width: 36px;
+  height: 36px;
+  fill: white;
+}
+#navbar .content .sidebar.fade-out {
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 #navbar .content .menu {
   display: flex;
@@ -199,11 +226,11 @@ p {
 #skadespeleri .container h3 {
   text-align: center;
 }
+#skadespeleri .container p {
+  padding-bottom: 3rem;
+}
 #skadespeleri .container .content {
   text-align: center;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   margin-bottom: 40px;
 }
 #skadespeleri .container .content .showreel iframe {
@@ -214,13 +241,11 @@ p {
   background: white;
   border-radius: 40px;
 }
-#skadespeleri .container .content .cv embed {
-  width: 580px;
-  height: 326px;
-  padding: 8px;
-  margin: 8px;
-  background: white;
-  border-radius: 40px;
+#skadespeleri .container .content .cv {
+  text-align: left;
+}
+#skadespeleri .container .content .cv p {
+  padding-bottom: 8px;
 }
 #skadespeleri .container .galleri {
   display: grid;
@@ -243,6 +268,9 @@ p {
 }
 #sang .container h2 {
   margin: 40px 0;
+}
+#sang .container p {
+  padding-bottom: 3rem;
 }
 #sang .container .videos {
   display: flex;

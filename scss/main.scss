@@ -74,36 +74,67 @@ p {
             padding: 0 1rem;
         }
 
-        .sidebar {
-            position: fixed;
-            top: 0;
-            right: 0;
-            height: 100vh;
-            width: 100vw;
-            z-index: 100;
-            background: rgba(241, 120, 49, 0.3);
-            backdrop-filter: blur(10px);
-            box-shadow: -10px 0 10px 0 rgba(0, 0, 0, 0.1);
-            display: none;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: flex-start;
+        /* ===== SIDEBAR - Mobilmeny ===== */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(241, 120, 49, 0.7); /* ORANGE overlay */
+  backdrop-filter: blur(8px);
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
 
-            li {
-                width: 100%;
-                padding: 1.2rem 4rem;
 
-                :hover {
-                    color: $orange1;
-                }
+        /* När menyn är aktiv */
+        .sidebar.active {
+        display: flex;
+        opacity: 1;
+        }
 
-                a {
-                    width: 100%;
-                    color: $white;
-                    font-weight: 600;
-                    font-size: 1.6rem;
-                }
-            }
+        /* Länkarna i menyn */
+        .sidebar li {
+        padding: 1.2rem;
+        text-align: center;
+        }
+
+        .sidebar li a {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: white;
+        text-decoration: none;
+        transition: color 0.2s ease;
+        }
+
+        .sidebar li a:hover {
+        color: #ffddbb;
+        }
+
+        /* X-KNAPPEN uppe till höger */
+        .sidebar li:first-child {
+        position: absolute;
+        top: 20px;
+        right: 25px;
+        padding: 0;
+        }
+
+        .sidebar li:first-child a svg {
+        width: 36px;
+        height: 36px;
+        fill: white;
+        }
+
+        /* Fade ut när man stänger */
+        .sidebar.fade-out {
+        opacity: 0;
+        transition: opacity 0.3s ease;
         }
 
         .menu {
@@ -217,11 +248,12 @@ p {
             text-align: center;
         }
 
+        p {
+            padding-bottom: 3rem;
+        }
+
         .content {
             text-align: center;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
             margin-bottom: 40px;
 
             .showreel {
@@ -236,13 +268,9 @@ p {
             }
 
             .cv {
-                embed {
-                    width: 580px;
-                    height: 326px;
-                    padding: 8px;
-                    margin: 8px;
-                    background: white;
-                    border-radius: 40px;
+                text-align: left;
+                p {
+                    padding-bottom: 8px;
                 }
             }
         }
@@ -273,6 +301,10 @@ p {
     .container {
         h2 {
             margin: 40px 0;
+        }
+
+        p {
+            padding-bottom: 3rem;
         }
 
         .videos {
